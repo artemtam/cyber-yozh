@@ -9,20 +9,21 @@ import "./style.css"
 import React, {useEffect, useMemo, useState} from "react";
 import LanguageDropdown from "../components/LanguageDropdown";
 
-const LANGUAGES = [{value: 'uk', file: messagesUA}, {value: 'ru', file:messagesRU}, {value: 'en', file: messagesEN}];
+
+const LANGUAGES: Record<string, {[x: string]: string;}> = {
+    uk: messagesUA,
+    ru: messagesRU,
+    en: messagesEN,
+};
 
 function MyApp({Component, pageProps}: AppProps) {
     const [locale, setLocale] = useState('ru');
-    const messages = useMemo(() => {
-        const lang = LANGUAGES.find(({value}) => value === locale)
-        return lang ? lang?.file : messagesEN
-    }, [locale]);
+    const messages = useMemo(() => LANGUAGES[locale] || LANGUAGES.en,  [locale]);
 
     useEffect(() => {
         const navigatorLanguage = navigator.language.slice(0, 2)
-        const langCodes = LANGUAGES.map(({value}) => value)
-        const language = langCodes.includes(navigatorLanguage) ? navigatorLanguage : 'en'
-        setLocale(language);
+        const detectedLocale = Object.keys(LANGUAGES).includes(navigatorLanguage) ? navigatorLanguage : 'en'
+        setLocale(detectedLocale);
     }, []);
 
     return (
