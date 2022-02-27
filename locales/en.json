@@ -1,0 +1,13 @@
+{
+  "title": "CYBER-YOZH",
+  "p1": "Today we're giving you a real cyberweapon. Meet CYBER-YOZH. Press Attack button and CYBER-YOZH will bomb enemy's websites just like Bayraktar drones were bombing Putin's troops.",
+  "p2": "Please do not close browser tab — it is important to keep it open in order to get cyberbullets to its final destination.",
+  "p3": "Below there is a number of cyberbullets that CYBER-YOZH shots per second. Increase it if you've good internet-connection & powerful PC.",
+  "p4": "Glory to Ukraine!",
+  "p5": "Your device is sending many requests to get down the enemy's website:",
+  "currentTarget": "Current target: ",
+  "numberThreads": "Number of threads:",
+  "attack": "Attack!",
+  "stop": "Stop",
+  "requestsPerSecond": "Requests per second"
+}

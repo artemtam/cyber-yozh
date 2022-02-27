@@ -1,0 +1,135 @@
+body {
+    background-color: #0A0A0A;
+    margin: 0;
+    font-family: 'Bitter', serif;
+    color: #32cc00;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+}
+
+.content {
+    max-width: 674px;
+    flex-grow: 1;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.details {
+    font-size: 18px;
+}
+
+p {
+    margin: 32px 0 0 0;
+}
+
+.target {
+    font-family: Helvetica, sans-serif;
+    padding: 18px 16px;
+    border: 1px solid #de0000;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.icon {
+    margin-right: 12px;
+}
+
+.url {
+    color: #fff;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.workers {
+
+}
+
+.input {
+    width: 50px;
+    background: #353632;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    outline: 0;
+}
+
+.button {
+    background: #de0000;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 10px 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.buttonStop {
+    background: #f59342;
+}
+
+.infoTable  {
+    margin-top: 10px;
+    width: 100%;
+    color: #fff;
+    border-collapse: collapse;
+}
+
+.infoTable tr td {
+    border-bottom: 1px solid #353632;
+    border-top: 1px solid #353632;
+    padding: 14px 4px;
+    font-family: Helvetica, sans-serif;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    animation: spin 1.2s linear infinite;
+    margin-right: 8px;
+}
+
+.infoTableCell {
+    display: flex;
+    align-items: center;
+}
+
+.social {
+    margin-top: 64px;
+    color: rgba(50, 204, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social a, .social a:visited {
+    margin-top: 4px;
+    color: rgba(50, 204, 0, 0.4);
+}
