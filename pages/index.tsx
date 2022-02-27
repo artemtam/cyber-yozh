@@ -24,7 +24,7 @@ const Home: NextPage = () => {
                     </p>
 
                     <p>
-                        <FormattedMessage id="p4"/>
+                        <FormattedMessage id="p4"/><></>
                     </p>
                 </div>
 

@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
-
 import useInterval from "../hooks/useInterval";
 import {FormattedMessage} from "react-intl";
+import LanguageDropdown from "./LanguageDropdown";
 
 const AttackForm = () => {
     const [targets, setTargets] = useState(['https://sberbank.ru']);

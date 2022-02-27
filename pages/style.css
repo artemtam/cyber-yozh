@@ -10,7 +10,7 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    padding: 32px;
+    padding: 15px 30px 30px;
 }
 
 .content {
@@ -132,4 +132,19 @@ p {
 .social a, .social a:visited {
     margin-top: 4px;
     color: rgba(50, 204, 0, 0.4);
+}
+
+.Dropdown-root {
+    width: 200px;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.Dropdown-control, .Dropdown-menu, .Dropdown-option {
+    background-color: #0A0A0A !important;
+    color: rgb(50, 204, 0) !important;
+}
+.Dropdown-option:hover {
+    background-color: #262626 !important;
 }
