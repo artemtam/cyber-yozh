@@ -1,5 +1,4 @@
 import React, {useEffect, useRef, useState} from 'react';
-
 import useInterval from "../hooks/useInterval";
 import {FormattedMessage} from "react-intl";
 
