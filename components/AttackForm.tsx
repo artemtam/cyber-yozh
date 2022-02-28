@@ -19,7 +19,7 @@ const AttackForm = () => {
                 setTargets(data.targets);
                 if (started) {
                     stopAttack();
-                    startAttack(data.targets[0]);
+                    startAttack(data.targets[0], threads);
                 }
             }
 
@@ -36,18 +36,18 @@ const AttackForm = () => {
 
     useEffect(() => {
         updateTargets().then((targets) => {
+            const savedThreads = Number(localStorage.getItem('threads')) || 10
+            setThreads(savedThreads);
             if (localStorage.getItem('started') === 'true') {
-                startAttack(targets[0]);
+                startAttack(targets[0], savedThreads);
             }
-
-            setThreads(Number(localStorage.getItem('threads')) || 10);
         });
 
     }, []);
 
     useInterval(updateTargets, 60_000);
 
-    const startAttack = (target: string) => {
+    const startAttack = (target: string, threads: number) => {
         setStartTime(performance.now());
         setStarted(true);
 
@@ -114,7 +114,7 @@ const AttackForm = () => {
                 </div>
 
                 {!started ? (
-                    <button className="button" onClick={() => startAttack(targets[0])}
+                    <button className="button" onClick={() => startAttack(targets[0], threads)}
                             disabled={threads <= 0 || !targets[0]}><FormattedMessage id="attack"/></button>
                 ) : (
                     <button className="button buttonStop" onClick={stopAttack}><FormattedMessage id="stop"/></button>
