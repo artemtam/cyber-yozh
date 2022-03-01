@@ -39,7 +39,7 @@ self.addEventListener('message', async (e) => {
 
     // report nRequests every second and change payload/headers
     setInterval(() => {
-        payload = generateRandomString(PAYLOAD_SIZE);
+        payload = generateRandomString(PAYLOAD_SIZE + Math.round(Math.random() * 100) * 2 - 100);
         self.postMessage(nRequests);
         nRequests = 0n;
     }, REPORT_INTERVAL);
