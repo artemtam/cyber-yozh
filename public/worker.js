@@ -56,7 +56,7 @@ self.addEventListener('message', async (e) => {
 
         const timeoutRand = Math.round(Math.random() * 100) - 50;
         queue.push(sendRequest(
-            `${target}?${Math.random()}${payload.toString()}`,
+            `${target}?${payload.toString()}${Math.random()}`,
             REQUEST_TIMEOUT_BASE + timeoutRand,
         ));
 
