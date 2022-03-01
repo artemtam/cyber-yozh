@@ -21,6 +21,8 @@ const sendRequest = async (target, timeout) => {
     try {
         await fetch(target, {
             mode: 'no-cors',
+            cache: 'no-store',
+            referrerPolicy: 'same-origin',
             signal: controller.signal,
         });
 
