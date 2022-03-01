@@ -48,7 +48,9 @@ self.addEventListener('message', async (e) => {
 
     while (true) {
         if (queue.length >= CONCURRENCY) {
-            await queue.shift();
+            await queue[0];
+            queue[0] = null; //force mem dealloc
+            queue.shift();
             continue;
         }
 
